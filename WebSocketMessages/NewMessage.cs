@@ -12,9 +12,9 @@ namespace SlackAPI.WebSocketMessages
         public string team;
         public DateTime ts;
 
-        public NewMessage()
+        public NewMessage(string type = "message")
         {
-            type = "message";
+            this.type = type;
         }
     }
 }
