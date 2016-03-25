@@ -122,6 +122,7 @@
     <Compile Include="UserTeamCombo.cs" />
     <Compile Include="Utilities\ILockFree.cs" />
     <Compile Include="Utilities\LockFreeQueue.cs" />
+    <Compile Include="WebSocketMessages\ActionMessage.cs" />
     <Compile Include="WebSocketMessages\ChannelArchive.cs" />
     <Compile Include="WebSocketMessages\ChannelCreated.cs" />
     <Compile Include="WebSocketMessages\ChannelDeleted.cs" />
@@ -145,6 +146,7 @@
     <Compile Include="WebSocketMessages\PresenceChange.cs" />
     <Compile Include="WebSocketMessages\ReactionAdded.cs" />
     <Compile Include="WebSocketMessages\TeamJoin.cs" />
+    <Compile Include="WebSocketMessages\TopicMessage.cs" />
     <Compile Include="WebSocketMessages\Typing.cs" />
     <Compile Include="WebSocketMessages\UserChange.cs" />
   </ItemGroup>
