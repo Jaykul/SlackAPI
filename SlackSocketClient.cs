@@ -29,15 +29,25 @@ namespace SlackAPI
         public SlackSocketClient(string token)
             : base(token)
         {
-
+            PingRoundTripMilliseconds = int.MinValue;
         }
 
-		public override void Connect(Action<LoginResponse> onConnected, Action onSocketConnected = null)
+        public override void Connect(Action<LoginResponse> onConnected = null)
+        {
+            Connect(onConnected, null);
+        }
+
+        public void Connect(Action<LoginResponse> onConnected = null, Action onSocketConnected = null)
 		{
-			base.Connect((s) => {
-				ConnectSocket(onSocketConnected);
-				onConnected(s);
-			});
+            PingRoundTripMilliseconds = -10;
+            base.Connect((s) =>
+            {
+                ConnectSocket(onSocketConnected);
+                if (onConnected == null)
+                {
+                    onConnected(s);
+                }
+            });
 		}
 
         protected override void Connected(LoginResponse loginDetails)
@@ -118,6 +128,7 @@ namespace SlackAPI
 
         public void HandleHello(Hello hello)
         {
+            PingRoundTripMilliseconds = -1;
             HelloReceived = true;
 
             if (OnHello != null)

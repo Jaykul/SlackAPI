@@ -122,7 +122,7 @@
     <Compile Include="UserTeamCombo.cs" />
     <Compile Include="Utilities\ILockFree.cs" />
     <Compile Include="Utilities\LockFreeQueue.cs" />
-    <Compile Include="WebSocketMessages\ActionMessage.cs" />
+    <Compile Include="WebSocketMessages\Message\MeMessage.cs" />
     <Compile Include="WebSocketMessages\ChannelArchive.cs" />
     <Compile Include="WebSocketMessages\ChannelCreated.cs" />
     <Compile Include="WebSocketMessages\ChannelDeleted.cs" />
@@ -130,7 +130,7 @@
     <Compile Include="WebSocketMessages\ChannelRename.cs" />
     <Compile Include="WebSocketMessages\ChannelUnarchive.cs" />
     <Compile Include="WebSocketMessages\DeletedMessage.cs" />
-    <Compile Include="WebSocketMessages\FileShareMessage.cs" />
+    <Compile Include="WebSocketMessages\Message\FileShareMessage.cs" />
     <Compile Include="WebSocketMessages\GroupArchive.cs" />
     <Compile Include="WebSocketMessages\GroupClose.cs" />
     <Compile Include="WebSocketMessages\GroupJoined.cs" />
@@ -140,13 +140,13 @@
     <Compile Include="WebSocketMessages\GroupUnarchive.cs" />
     <Compile Include="WebSocketMessages\Hello.cs" />
     <Compile Include="WebSocketMessages\MessageReceived.cs" />
-    <Compile Include="WebSocketMessages\NewMessage.cs" />
+    <Compile Include="WebSocketMessages\Message\NewMessage.cs" />
     <Compile Include="WebSocketMessages\Ping.cs" />
     <Compile Include="WebSocketMessages\Pong.cs" />
     <Compile Include="WebSocketMessages\PresenceChange.cs" />
     <Compile Include="WebSocketMessages\ReactionAdded.cs" />
     <Compile Include="WebSocketMessages\TeamJoin.cs" />
-    <Compile Include="WebSocketMessages\TopicMessage.cs" />
+    <Compile Include="WebSocketMessages\Message\ChannelTopicMessage.cs" />
     <Compile Include="WebSocketMessages\Typing.cs" />
     <Compile Include="WebSocketMessages\UserChange.cs" />
   </ItemGroup>

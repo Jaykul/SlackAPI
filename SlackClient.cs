@@ -62,12 +62,13 @@ namespace SlackAPI
             APIToken = token;
         }
 
-		public virtual void Connect(Action<LoginResponse> onConnected = null, Action onSocketConnected = null)
+		public virtual void Connect(Action<LoginResponse> onConnected = null)
         {
             EmitLogin((loginDetails) =>
             {
 				if(loginDetails.ok)
 					Connected(loginDetails);
+
                 if (onConnected != null)
                     onConnected(loginDetails);
             });
@@ -114,7 +115,7 @@ namespace SlackAPI
             {
                 DirectMessageLookup.Add(im.id, im);
                 ConversationLookup.Add(im.id, im);
-            }
+        }
         }
 
         internal static Uri GetSlackUri(string path, Tuple<string, string>[] getParameters)
@@ -213,7 +214,7 @@ namespace SlackAPI
 		public void ChannelsCreate(Action<ChannelCreateResponse> callback, string name) {
 			APIRequestWithToken(callback, new Tuple<string, string>("name", name));
 		}
-		public void GetChannelList(Action<ChannelListResponse> callback, bool ExcludeArchived = true)
+        public void GetChannelList(Action<ChannelListResponse> callback, bool ExcludeArchived = true)
         {
             APIRequestWithToken(callback, new Tuple<string, string>("exclude_archived", ExcludeArchived ? "1" : "0"));
         }
