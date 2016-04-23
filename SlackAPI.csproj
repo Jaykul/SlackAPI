@@ -31,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -109,6 +109,7 @@
     <Compile Include="RPCMessages\UserGetPresenceResponse.cs" />
     <Compile Include="SlackClient.cs" />
     <Compile Include="RPCMessages\StarListResponse.cs" />
+    <Compile Include="SlackEventClient.cs" />
     <Compile Include="SlackScope.cs" />
     <Compile Include="SlackSocket.cs" />
     <Compile Include="SlackSocketClient.cs" />
